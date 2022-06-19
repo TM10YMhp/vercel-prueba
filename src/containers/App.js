@@ -24,7 +24,7 @@ export default function App() {
   function onSearch(input){
     console.log(input);
     //Llamado a la API del clima
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}`)
       .then(r => r.json())
       .then(json => {
         console.log(json)
