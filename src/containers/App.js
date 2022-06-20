@@ -1,6 +1,5 @@
 import './App.css';
 import Nav from '../components/Nav.jsx'
-import Card from '../components/Card.jsx';
 import Cards from '../components/Cards.jsx';
 import React, { useState } from 'react';
 import { Route, Switch} from 'react-router-dom'
@@ -8,7 +7,7 @@ import About from '../components/About.jsx'
 import Ciudad from '../components/Ciudad.jsx'
 
 //const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
-const apiKey = 'f9b114846a7fd15c105bb18be0aa2ec6';
+const apiKey = process.env.REACT_APP_APIKEY;
 
 export default function App() {
   const [ciudad,setCiudad] = useState([]);
