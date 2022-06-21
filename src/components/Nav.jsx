@@ -9,11 +9,11 @@ function Nav(props) {
       <Link to='/'>
         <span className="navbar-brand">
           <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
-          Henry - Weather App
+          Henry - Practica de Clima
         </span>
       </Link>
       <Link to='/about'>
-        <span>about</span>
+        <span className='navbar-brand'>Informacion Adicional</span>
       </Link>
         <SearchBar onSearch={props.onSearch} />
     </nav>

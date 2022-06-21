@@ -7,6 +7,7 @@ export default function SearchBar(props){
     <form onSubmit={(e) => {
       e.preventDefault();
       props.onSearch(input);
+      setInput('');
     }}>
       <input
         type='text'
