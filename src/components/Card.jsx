@@ -14,12 +14,8 @@ export default function Card (props) {
           </Link>
           <div className="row">
             <div className="col-sm-4 col-md-4 col-lg-4">
-              <p>min</p>
-              <p>{props.min}</p>
-            </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
-              <p>max</p>
-              <p>{props.max}</p>
+              <p>temp</p>
+              <p>{props.temp}°</p>
             </div>
             <div className="col-sm-4 col-md-4 col-lg-4">
               <img className="iconoClima" src={"https://openweathermap.org/img/wn/"+props.img+"@2x.png"} width="80" height="80" alt="" />

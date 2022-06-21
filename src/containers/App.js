@@ -41,7 +41,8 @@ export default function App() {
   }
 
   function onSearch(input){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}`)
+    if(!input) return alert('input vacio');
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&units=metric`)
     .then(r => r.json())
     .then(json => {
       if(json.cod === 200){
@@ -49,8 +50,9 @@ export default function App() {
         const city = {
           id: json.id,
           name:json.name,
-          min:json.main.temp_min,
-          max:json.main.temp_max,
+          temp:json.main.temp,
+          humedad:json.main.humidity,
+          presion:json.main.pressure,
           img:json.weather[0].icon
         }
         if(ciudad.find(c => c.name === json.name)){
